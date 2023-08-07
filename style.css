@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background: url(Back.jpg) no-repeat center fixed;
+  background-size: cover;
+  min-width: 100vh;
+}
+
+.Sidebar {
+  background: rgba(28, 28, 38, 0.7);
+  color: #fff;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Scrollbar */
+
+.Sidebar ::-webkit-scrollbar {
+  width: 5px;
+}
+
+.Sidebar ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.Sidebar ::-webkit-scrollbar-thumb {
+  background: #2a2f44;
+  border-radius: 10px;
+}
+
+.Sidebar > div {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 1.7em 1em 1.7em 1em;
+}
+
+.Sidebar a {
+  text-decoration: none;
+}
+
+.Sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.Sidebar small {
+  color: #ccc;
+}
+
+.brand {
+  display: block;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.menu-heading {
+  padding: 1rem;
+  margin: 2em 0 0.5em 0;
+  display: block;
+}
+
+.Sidebar ul{
+  padding-bottom: 1.5em;
+}
+
+.Sidebar li a {
+  color: #ccc;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0.8em;
+  transition: 0.3s;
+}
+
+.tools li a:hover {
+  background: #ffe100;
+  color: black;
+}
+
+.Sidebar ul .fa-solid {
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
+}
+
+.Sidebar ul .fa-regular {
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
+}
+
+hr {
+  border: 1px #2a2f44 solid;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.notifications li a {
+  justify-content: space-between;
+}
+
+.notifications li a:hover {
+  color: #fff;
+}
+
+.badge {
+  background: #0088ff;
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+.profile {
+  padding: 1.7em 1em 3.7em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile img {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+.profile h4 {
+  margin: 0 0 0.5em 0;
+}
+
+@media screen and (max-width: 800px) {
+  .Sidebar {
+    width: 4.5em;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .Sidebar > div {
+    padding: 1.7em 0.2em 1.7em 0.3em;
+  }
+
+  .Sidebar span:not(.fa-regular, .fa-solid),
+  .profile div,
+  .profile span {
+    display: none;
+  }
+
+  .menu-heading , .profile{
+    margin-top: 0;
+  }
+
+  .profile{
+    justify-content: center ;
+  }
+}
